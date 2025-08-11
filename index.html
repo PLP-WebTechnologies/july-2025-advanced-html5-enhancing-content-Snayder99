@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        header, footer {
+            background-color: #005f73;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form section {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 40px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Form</h1>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>Instructions</h2>
+                <ul>
+                    <li>Please complete all required fields.</li>
+                    <li>Ensure the data is accurate before submission.</li>
+                    <li>Your information will be kept confidential.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Sample Media</h2>
+                <img src="https://via.placeholder.com/600x200" alt="Sample placeholder image">
+            </section>
+
+            <section>
+                <h2>Plan Comparison Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>Features</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Basic</td>
+                            <td>Access to form and submission</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>Premium</td>
+                            <td>Priority support and downloads</td>
+                            <td>KES 250</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+
+        <section>
+            <h2>Registration Form</h2>
+            <form action="#" method="post" autocomplete="on">
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0712345678" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">--Select--</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" value="Kenya" readonly>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Choose a strong password" required minlength="8">
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Tell us something about yourself..." rows="4"></textarea>
+
+                <label>
+                    <input type="checkbox" name="subscribe" checked>
+                    Subscribe to newsletter
+                </label>
+
+                <label>
+                    <input type="radio" name="membership" value="basic" required>
+                    Basic Membership
+                </label>
+                <label>
+                    <input type="radio" name="membership" value="premium">
+                    Premium Membership
+                </label>
+
+                <input type="submit" value="Submit Form">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
